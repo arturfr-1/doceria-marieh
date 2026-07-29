@@ -1,0 +1,73 @@
+.menu-icon {
+    width: 80px; 
+    height: 80px; 
+    margin: 0 auto 20px;
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 2.5rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+}
+ 
+.menu-card:hover .menu-icon {
+    transform: scale(1.1);
+}
+ 
+ 
+/* ==========================================
+   CARD 1: Copos Recheados
+   ========================================== */
+.menu-card:nth-child(1) .menu-icon {
+    background-image: url('imagem\ \(13\).jpg');
+    background-color: var(--pink-soft);
+}
+ 
+ 
+/* ==========================================
+   CARD 2: Brownie
+   ========================================== */
+.menu-card:nth-child(2) .menu-icon {
+    background-image: url('INSIRA_URL_AQUI');
+    background-color: var(--brown-light);
+}
+ 
+ 
+/* ==========================================
+   CARD 3: Rosquinhas
+   ========================================== */
+.menu-card:nth-child(3) .menu-icon {
+    background-image: url('INSIRA_URL_AQUI');
+    background-color: var(--pink-medium);
+}
+ 
+ 
+/* ==========================================
+   CARD 4: Caixa com 4 Doces
+   ========================================== */
+.menu-card:nth-child(4) .menu-icon {
+    background-image: url('INSIRA_URL_AQUI');
+    background-color: var(--pink-soft);
+}
+ 
+ 
+/* ==========================================
+   CARD 6: Bombom de Morango (Favorito)
+   ========================================== */
+.menu-card:nth-child(5) .menu-icon {
+    background-image: url('INSIRA_URL_AQUI');
+    background-color: var(--pink-deep);
+}
+ 
+ 
+/* ==========================================
+   CARD 7: Bolo de Festa
+   ========================================== */
+.menu-card:nth-child(6) .menu-icon {
+    background-image: url('INSIRA_URL_AQUI');
+    background-color: var(--pink-medium);
+}
