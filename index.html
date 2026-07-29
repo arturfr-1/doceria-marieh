@@ -65,7 +65,10 @@
             font-size: 1.6rem; color: var(--pink-deep);
             text-decoration: none;
         }
-        .logo-icon { font-size: 1.8rem; }
+        .logo-icon { .logo-icon 
+            width: 40px;
+            height: 40px;
+        }
         .nav-desktop { display: none; gap: 30px; }
         .nav-desktop a {
             color: var(--text-dark); text-decoration: none; font-weight: 500;
@@ -178,6 +181,12 @@
             background: linear-gradient(135deg, var(--pink-soft), var(--pink-medium));
             border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;
         }
+        .menu-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
         .menu-card h3 { font-size: 1.4rem; color: var(--brown-chocolate); margin-bottom: 8px; }
         .menu-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; font-weight: 300; }
         .menu-price {
@@ -269,7 +278,7 @@
     <header class="header">
         <div class="header-inner">
             <a href="#" class="logo">
-                <span class="logo-icon">🧁</span>
+                 <img src="logo.jfif" alt="Logo Doceria Marieh" class="logo-icon">
                 Doceria Marieh
             </a>
             <nav class="nav-desktop">
@@ -320,38 +329,50 @@
             </div>
             <div class="menu-grid">
                 <div class="menu-card">
-                    <div class="menu-icon">🥤</div>
+                    <div class="menu-icon">
+                        <img src="copo.jfif" alt="Copos Recheados">
+                    </div>
                     <h3>Copos Recheados</h3>
                     <p>Camadas generosas de creme, recheios explosivos e cobertura que derrete na boca. Perfeitos para presentear.</p>
                     <span class="menu-price">R$ 12,00</span>
                 </div>
                 <div class="menu-card">
-                    <div class="menu-icon">🍫</div>
+                    <div class="menu-icon">
+                        <img src="brownie.jfif" alt="Brownie">
+                    </div>
                     <h3>Brownie</h3>
-                    <p>Intenso, úmido e com aquele toque de chocolate que derrete na boca. Perfeito para acompanhar o café.</p>
+                    <p>Intenso, úmido e com aquele toque de chocolate que derrete na boca.</p>
                     <span class="menu-price">R$ 8,00</span>
                 </div>
                 <div class="menu-card">
-                    <div class="menu-icon">🍩</div>
+                    <div class="menu-icon">
+                        <img src="double.jfif" alt="Rosquinhas">
+                    </div>
                     <h3>Rosquinhas</h3>
-                    <p>Crocantes por fora, macias por dentro. O docinho tradicional que combina com um cafezinho.</p>
+                    <p>Muito macias por dentro. O docinho tradicional que combina com um cafézinho.</p>
                     <span class="menu-price">R$ 6,00</span>
                 </div>
                 <div class="menu-card">
-                    <div class="menu-icon">🎁</div>
+                    <div class="menu-icon">
+                        <img src="brigadeiro.jfif" alt="Caixa com 4 Doces">
+                    </div>
                     <h3>Caixa com 4 Doces</h3>
                     <p>Uma seleção especial dos nossos doces para presentear ou se deliciar. Monte sua caixa como preferir!</p>
                     <span class="menu-price">R$ 6,00</span>
                 </div>
                 <div class="menu-card">
                     <span class="badge">Favorito ✨</span>
-                    <div class="menu-icon">🍓</div>
+                    <div class="menu-icon">
+                         <img src="morango.jfif" alt="Bombom de Morango">
+                    </div>
                     <h3>Bombom de Morango</h3>
                     <p>Chocolate cremoso envolvendo morango fresco. Irresistível do primeiro ao último pedaço.</p>
                     <span class="menu-price">R$ 6,00</span>
                 </div>
                 <div class="menu-card">
-                    <div class="menu-icon">🎂</div>
+                    <div class="menu-icon">
+                         <img src="bolo.jfif" alt="Bolo de Festa">
+                    </div>
                     <h3>Bolo de Festa</h3>
                     <p>Massa fofinha, recheios cremosos e cobertura caprichada. Personalizamos para o seu evento!</p>
                     <span class="menu-price">A partir de R$ 80,00</span>
