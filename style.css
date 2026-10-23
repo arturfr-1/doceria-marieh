@@ -1,73 +1,247 @@
-.menu-icon {
-    width: 80px; 
-    height: 80px; 
-    margin: 0 auto 20px;
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    font-size: 2.5rem;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: transform 0.3s ease;
+/* ==========================================================
+   Doceria Marieh — identidade vinda da própria marca:
+   listra rosa da logo, chocolate do "m", lilás das embalagens
+   e vermelho dos morangos.
+   ========================================================== */
+
+:root {
+  --rose: #ffe4e9;
+  --stripe: #f7c6d1;
+  --paper: #fff9f7;
+  --choc: #4a1d0c;
+  --ink: #3a1a0e;
+  --muted: #74534a;
+  --lilac: #cdb8ec;
+  --lilac-soft: #f1eafb;
+  --berry: #d92d3a;
+  --berry-dark: #b3202d;
+  --wa: #1fa855;
+
+  --font-display: "Caprasimo", "Georgia", serif;
+  --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+
+  --pinstripe: repeating-linear-gradient(90deg, var(--rose) 0 22px, var(--stripe) 22px 24px);
+  --wrap: 1160px;
 }
- 
-.menu-card:hover .menu-icon {
-    transform: scale(1.1);
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
 }
- 
- 
-/* ==========================================
-   CARD 1: Copos Recheados
-   ========================================== */
-.menu-card:nth-child(1) .menu-icon {
-    background-image: url('imagem\ \(13\).jpg');
-    background-color: var(--pink-soft);
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+:focus-visible {
+  outline: 3px solid var(--berry);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
- 
- 
-/* ==========================================
-   CARD 2: Brownie
-   ========================================== */
-.menu-card:nth-child(2) .menu-icon {
-    background-image: url('INSIRA_URL_AQUI');
-    background-color: var(--brown-light);
+
+.wrap { width: min(var(--wrap), 100% - 48px); margin-inline: auto; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; color: var(--choc); line-height: 1.1; }
+
+.skip {
+  position: absolute; left: 12px; top: -60px; z-index: 2000;
+  background: var(--choc); color: #fff; padding: 10px 16px; border-radius: 10px;
 }
- 
- 
-/* ==========================================
-   CARD 3: Rosquinhas
-   ========================================== */
-.menu-card:nth-child(3) .menu-icon {
-    background-image: url('INSIRA_URL_AQUI');
-    background-color: var(--pink-medium);
+.skip:focus { top: 12px; }
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 28px; border-radius: 999px;
+  font-weight: 700; font-size: 1.05rem; text-decoration: none;
+  border: 2px solid transparent; cursor: pointer;
+  transition: background-color .2s, color .2s, border-color .2s;
 }
- 
- 
-/* ==========================================
-   CARD 4: Caixa com 4 Doces
-   ========================================== */
-.menu-card:nth-child(4) .menu-icon {
-    background-image: url('INSIRA_URL_AQUI');
-    background-color: var(--pink-soft);
+.btn svg { width: 22px; height: 22px; fill: currentColor; flex: none; }
+.btn-wa { background: var(--berry); color: #fff; }
+.btn-wa:hover { background: var(--berry-dark); }
+.btn-line { border-color: var(--choc); color: var(--choc); background: transparent; }
+.btn-line:hover { background: var(--choc); color: #fff; }
+.btn-sm { padding: 10px 20px; font-size: .98rem; }
+
+/* ---------- Cabeçalho ---------- */
+.header {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(255, 249, 247, .94);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--stripe);
 }
- 
- 
-/* ==========================================
-   CARD 6: Bombom de Morango (Favorito)
-   ========================================== */
-.menu-card:nth-child(5) .menu-icon {
-    background-image: url('INSIRA_URL_AQUI');
-    background-color: var(--pink-deep);
+.header-inner { display: flex; align-items: center; gap: 28px; padding-block: 10px; }
+
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; }
+.brand img { width: 52px; height: 52px; border-radius: 50%; border: 2px solid var(--stripe); }
+.brand span { font-family: var(--font-display); font-size: 1.45rem; color: var(--choc); }
+
+.nav { display: none; gap: 28px; }
+.nav a { text-decoration: none; font-weight: 600; color: var(--choc); padding: 6px 0; border-bottom: 2px solid transparent; }
+.nav a:hover { border-bottom-color: var(--berry); }
+
+.header .btn { display: none; }
+
+.menu-toggle {
+  background: none; border: 2px solid var(--choc); border-radius: 12px;
+  padding: 9px 10px; cursor: pointer; display: grid; gap: 5px;
 }
- 
- 
-/* ==========================================
-   CARD 7: Bolo de Festa
-   ========================================== */
-.menu-card:nth-child(6) .menu-icon {
-    background-image: url('INSIRA_URL_AQUI');
-    background-color: var(--pink-medium);
+.menu-toggle span { display: block; width: 22px; height: 2.5px; background: var(--choc); border-radius: 2px; }
+
+.nav-mobile { display: none; background: var(--paper); border-top: 2px solid var(--stripe); padding: 8px 24px 20px; }
+.nav-mobile.open { display: grid; }
+.nav-mobile a { text-decoration: none; font-weight: 600; padding: 14px 0; border-bottom: 1px solid var(--stripe); color: var(--choc); }
+.nav-mobile .btn { margin-top: 16px; justify-content: center; border-bottom: 2px solid transparent; color: #fff; }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--pinstripe); padding: 56px 0 72px; overflow: hidden; }
+.hero-grid { display: grid; gap: 44px; align-items: center; }
+
+.hero h1 { font-size: clamp(2.6rem, 8vw, 4.9rem); margin-bottom: 22px; }
+.hero-lead { max-width: 30em; font-size: 1.2rem; color: var(--muted); margin-bottom: 32px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+.hero-photo { position: relative; max-width: 460px; justify-self: center; width: 100%; }
+.hero-photo .hero-img {
+  width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover;
+  border-radius: 999px 999px 28px 28px;
+  border: 6px solid var(--paper);
+  box-shadow: 0 0 0 2px var(--choc);
+}
+.seal {
+  position: absolute; left: -20px; bottom: 36px;
+  width: 116px; height: 116px; border-radius: 50%;
+  border: 4px solid var(--paper); box-shadow: 0 0 0 2px var(--choc);
+  transform: rotate(-12deg);
+  animation: stamp .7s .3s cubic-bezier(.3, 1.6, .5, 1) both;
+}
+@keyframes stamp {
+  from { opacity: 0; transform: rotate(-30deg) scale(1.7); }
+  to   { opacity: 1; transform: rotate(-12deg) scale(1); }
+}
+
+/* ---------- Seções ---------- */
+.section { padding: 84px 0; }
+.section-head { max-width: 38em; margin-bottom: 44px; }
+.section-head h2 { font-size: clamp(2rem, 5vw, 3.1rem); margin-bottom: 14px; }
+.section-head p { color: var(--muted); font-size: 1.12rem; }
+
+/* ---------- Cardápio ---------- */
+.menu-grid { display: grid; gap: 40px 24px; grid-template-columns: 1fr; }
+
+.item h3 { font-size: 1.5rem; margin-bottom: 6px; }
+.item p { color: var(--muted); margin-bottom: 14px; }
+.item img { width: 100%; object-fit: cover; margin-bottom: 18px; }
+
+.price {
+  display: inline-block; background: var(--lilac-soft); color: var(--choc);
+  border: 2px solid var(--lilac); border-radius: 999px;
+  padding: 4px 16px; font-weight: 800;
+}
+
+.item-feature img { aspect-ratio: 4 / 3; border-radius: 28px; border: 2px solid var(--choc); }
+.item-feature h3 { font-size: 1.9rem; }
+.item-feature .tag {
+  display: inline-block; background: var(--berry); color: #fff;
+  font-weight: 700; font-size: .9rem; padding: 3px 14px; border-radius: 999px; margin-bottom: 10px;
+}
+
+.item-small img { aspect-ratio: 1 / 1; border-radius: 999px 999px 22px 22px; border: 2px solid var(--stripe); }
+
+.menu-foot { margin-top: 56px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+.menu-foot p { color: var(--muted); }
+
+/* ---------- Diferenciais ---------- */
+.why { background: var(--lilac-soft); border-block: 2px solid var(--lilac); }
+.why-list { list-style: none; display: grid; gap: 36px 32px; grid-template-columns: 1fr; }
+.why-list li { display: grid; grid-template-columns: 64px 1fr; gap: 6px 18px; align-items: start; }
+.why-list img {
+  width: 64px; height: 64px; padding: 10px; grid-row: span 2;
+  background: var(--paper); border: 2px solid var(--lilac); border-radius: 50%;
+}
+.why-list h3 { font-size: 1.3rem; align-self: end; }
+.why-list p { color: var(--muted); grid-column: 2; }
+
+/* ---------- Como pedir ---------- */
+.steps { list-style: none; counter-reset: passo; display: grid; gap: 28px; grid-template-columns: 1fr; max-width: 900px; }
+.steps li { counter-increment: passo; display: grid; grid-template-columns: 52px 1fr; gap: 16px; align-items: start; }
+.steps li::before {
+  content: counter(passo);
+  display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
+  background: var(--choc); color: #fff; font-family: var(--font-display); font-size: 1.5rem;
+}
+.steps h3 { font-size: 1.35rem; margin-bottom: 4px; }
+.steps p { color: var(--muted); }
+
+/* ---------- Contato ---------- */
+.contact { background: var(--pinstripe); padding: 84px 0; border-top: 2px solid var(--stripe); }
+.contact-box {
+  background: var(--paper); border: 2px solid var(--choc); border-radius: 32px;
+  padding: 44px 28px; display: grid; gap: 32px;
+}
+.contact-box h2 { font-size: clamp(2rem, 5vw, 3.1rem); margin-bottom: 14px; }
+.contact-box > div > p { color: var(--muted); max-width: 30em; margin-bottom: 26px; }
+.contact-info { display: grid; gap: 14px; align-content: start; list-style: none; }
+.contact-info li { display: grid; gap: 2px; padding-bottom: 14px; border-bottom: 1px solid var(--stripe); }
+.contact-info strong { color: var(--choc); }
+
+/* ---------- Rodapé ---------- */
+.footer { background: var(--choc); color: var(--rose); padding: 36px 0; }
+.footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 28px; }
+.footer .brand span { color: #fff; }
+.footer .brand img { border-color: var(--stripe); }
+.footer p { font-size: .95rem; color: var(--stripe); }
+.footer a { text-decoration: underline; }
+
+/* ---------- WhatsApp flutuante ---------- */
+.float-wa {
+  position: fixed; right: 20px; bottom: 20px; z-index: 900;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: var(--wa); display: grid; place-items: center;
+  border: 3px solid var(--paper); box-shadow: 0 0 0 2px var(--choc);
+}
+.float-wa svg { width: 30px; height: 30px; fill: #fff; }
+
+/* ---------- Responsivo ---------- */
+@media (min-width: 560px) {
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+  .item-feature { grid-column: 1 / -1; }
+  .why-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .nav { display: flex; }
+  .header .btn { display: inline-flex; }
+  .menu-toggle, .nav-mobile { display: none !important; }
+
+  .hero { padding: 80px 0 96px; }
+  .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 64px; }
+
+  .menu-grid { grid-template-columns: repeat(12, 1fr); }
+  .item-feature { grid-column: span 6; }
+  .item-small { grid-column: span 3; }
+
+  .why-list { grid-template-columns: repeat(4, 1fr); }
+  .why-list li { grid-template-columns: 1fr; }
+  .why-list img { grid-row: auto; }
+  .why-list p { grid-column: 1; }
+
+  .steps { grid-template-columns: repeat(3, 1fr); gap: 36px; }
+  .steps li { grid-template-columns: 1fr; }
+
+  .contact-box { grid-template-columns: 1.3fr 1fr; padding: 56px; gap: 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .seal { animation: none; }
+  .btn { transition: none; }
 }
